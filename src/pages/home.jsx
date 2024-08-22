@@ -1,13 +1,13 @@
-import './App.css'
-import CardBooks from './components/CardBook/CardBooks'
-import bookCover1 from './assets/livros/rapido-e-devagar.jpg'
-import bookCover2 from './/assets/livros/ordem_vermelha.jpg'
-import bookCover3 from './assets/livros/pompeia-viva.jpg'
+import styles from './home.module.css'
+import CardBooks from '../components/CardBook/CardBooks'
+import bookCover1 from '../assets/livros/rapido-e-devagar.jpg'
+import bookCover2 from '../assets/livros/ordem_vermelha.jpg'
+import bookCover3 from '../assets/livros/pompeia-viva.jpg'
 
-function App() {
+function Home() {
   return (
     <>
-      <view className={bookContainer}>
+      <view className={styles.bookContainer}>
         <CardBooks
           title = "Rápido e Devagar: Duas Formas de Pensar"
           author = "Daniel Kahneman"
@@ -28,4 +28,4 @@ function App() {
   )
 }
 
-export default App;
+export default Home;
