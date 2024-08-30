@@ -1,5 +1,5 @@
 import style from './CardBooks.module.css'
-import Button from '../CardButton/Button';
+import Button from '../CardButton';
 
 const CardBooks = ({title, author, image}) => {
   return (

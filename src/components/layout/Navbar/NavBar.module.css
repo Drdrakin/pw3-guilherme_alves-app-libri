@@ -7,6 +7,15 @@
     padding: 1.2em 1em;
 }
 
+.navIcon{
+    padding: 0;
+    margin: 0 0 0 1em;
+    border: 0;
+    width: 2.5em;
+    height: 2.5em;
+    object-fit: scale-down;
+}
+
 .list{
     display: flex;
     list-style: none;
@@ -21,11 +30,3 @@
     font-weight: bold;
 }
 
-.navIcon{
-    padding: 0;
-    margin: 0 0 0 1em;
-    border: 0;
-    width: 2.5em;
-    height: 2.5em;
-    object-fit: scale-down;
-}

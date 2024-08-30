@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './ViewBook.module.css'
-import CardBooks from '../CardBook/CardBooks'
+import CardBooks from '../CardBook'
 import bookCover1 from '../../assets/livros/rapido-e-devagar.jpg'
 import bookCover2 from '../../assets/livros/ordem_vermelha.jpg'
 import bookCover3 from '../../assets/livros/pompeia-viva.jpg'

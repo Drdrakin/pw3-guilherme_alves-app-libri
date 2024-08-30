@@ -1,0 +1,36 @@
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    height: 100vh;
+}
+
+.bookIcon{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.homeContainer h1{
+    font-size: 2.5em;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.homeContainer h1 span{
+    font-size: 1.5em;
+    color:aliceblue;
+    font-family: 'Times New Roman', Times, serif !important;
+    padding: 0 .2em;
+    
+}
+
+.homeContainer p {
+    margin-bottom: 1.5em;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.homeContainer img {
+    width: 600px;
+}
