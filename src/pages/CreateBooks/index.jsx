@@ -26,9 +26,9 @@ const CreateBooks = () => {
           placeholder= 'Digite a descrição de seu livro aqui'
           text= 'Descrição do Livro'
         />
-        <Select
+        <Select className={styles.leftAlign}
           name='categoria'
-          text='Qual o gênero'
+          text='Insira o gênero do livro'
         />
         <Button
           rotulo='Cadastrar'
