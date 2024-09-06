@@ -11,6 +11,10 @@
     padding-bottom: 0;
 }
 
+.bookIcon{
+    margin-bottom: -10px;
+}
+
 .homeContainer h1{
     font-size: 2.5em;
     margin-bottom: 0;
