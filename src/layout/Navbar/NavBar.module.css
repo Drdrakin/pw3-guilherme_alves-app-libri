@@ -3,7 +3,6 @@
     justify-content: space-between;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(173,52,0,1) 15%);
-    padding: 1em;
     padding: 1.2em 1em;
 }
 
@@ -14,6 +13,7 @@
     width: 2.5em;
     height: 2.5em;
     object-fit: scale-down;
+    transition: 300ms;
 }
 
 .list{
@@ -28,5 +28,17 @@
     margin-right: 2.5em;
     font-size: 1.2em;
     font-weight: bold;
+    text-decoration: none;
+    transition-duration: 200ms;
+}
+
+.item:hover{
+    color:black;
+}
+
+.navIcon:hover{
+    width: 2.7em;
+    height: 2.7em;
+    align-self: normal;
 }
 

@@ -7,17 +7,17 @@ const NavBar = () => {
     <>
       <nav className={styles.navBar}>
           <ul className={styles.list}>
-            <Link to="/">
-              <li className={styles.item}><img className={styles.navIcon} src="book.png"></img></li>
+            <Link className={styles.item} to="/">
+              <li ><img className={styles.navIcon} src="book.png"></img></li>
             </Link>
-            <Link to="/">
-              <li className={styles.item}>HOME</li>
+            <Link className={styles.item} to="/">
+              <li >HOME</li>
             </Link>
-            <Link to="createBook">
-              <li className={styles.item}>CADASTRAR LIVRO</li>
+            <Link className={styles.item} to="createBook">
+              <li >CADASTRAR LIVRO</li>
             </Link>
-            <Link to="listBook">
-              <li className={styles.item}>LISTAR LIVRO</li>
+            <Link className={styles.item} to="listBook">
+              <li >LISTAR LIVRO</li>
             </Link>
           </ul>
       </nav>

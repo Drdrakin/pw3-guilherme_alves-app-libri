@@ -2,10 +2,12 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
+    font-size: 1em;
 }
 
 .form_control label{
     padding: .7em;
+    font-size: 1.5em;
     padding-left: 0;
     border-radius: 0;
     border: none;
@@ -21,7 +23,16 @@
 .form_control textarea{
     padding: 10px;
     width: 900px;
-    font-size: 1em;
+}
+
+.textArea{
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+.textInput{
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
 }
 
 .form_control input::placeholder{
