@@ -2,6 +2,7 @@ import styles from "./Input.module.css"
 
 const Input = ({type, text, placeholder, name, handler}) => {
 
+    //O componente se transforma em textarea para descrições se especificado.
     if(type == 'textarea'){
         return(
             <div className={styles.form_control}>

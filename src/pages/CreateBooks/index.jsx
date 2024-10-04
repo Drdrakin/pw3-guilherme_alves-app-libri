@@ -59,6 +59,7 @@ const CreateBooks = () => {
     createBook(book);
   }
 
+  //Como a handler forma o json com o 'name' do campo html, é necessário que o 'name' do campo seja o mesmo do banco
   function handlerChangeBook(event) {
     setBook({...book, [event.target.name] : event.target.value});
     console.log(book)
@@ -67,6 +68,7 @@ const CreateBooks = () => {
   return (
     <section className={styles.createBookContainer}>
         <h1>Cadastrar novos livros</h1>
+        <form onSubmit={submit} className={styles.createBookContainer}>
           <Input 
             type= 'text'
             name= 'nome_livro'
@@ -94,9 +96,9 @@ const CreateBooks = () => {
             categorias= {categorias}
           />
           <Button
-            handler={submit}
             rotulo= 'Cadastrar'
           />
+        </form>
     </section>
   )
 }

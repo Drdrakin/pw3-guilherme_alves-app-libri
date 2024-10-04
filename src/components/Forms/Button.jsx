@@ -1,10 +1,10 @@
 import styles from './Button.module.css'
 
-const Button = ({rotulo, handler}) => {
+const Button = ({rotulo}) => {
 
     return (
         <div>
-            <button className={styles.button} onClick={handler}>
+            <button className={styles.button}>
                 {rotulo}
             </button>
         </div>
