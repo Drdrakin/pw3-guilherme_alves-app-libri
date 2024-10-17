@@ -23,7 +23,6 @@ const CreateBooks = () => {
     )
     .then(
       (res) => {
-        console.log('Primeiro campo: ' + res.data[0].nome_categoria)
         setCategorias(res.data)
       }
     )
@@ -57,6 +56,8 @@ const CreateBooks = () => {
   function submit(event) {
     event.preventDefault();
     createBook(book);
+
+    console.log(book)
   }
 
   //Como a handler forma o json com o 'name' do campo html, é necessário que o 'name' do campo seja o mesmo do banco
@@ -91,9 +92,10 @@ const CreateBooks = () => {
             handler={handlerChangeBook}
           />
           <Select className={styles.leftAlign}
-            name= 'categoria'
-            text= 'Insira o gênero do livro'
+            name= 'cod_categoria'
+            text= 'Insira a Categoria do Livro'
             categorias= {categorias}
+            handler={handlerChangeBook}
           />
           <Button
             rotulo= 'Cadastrar'
