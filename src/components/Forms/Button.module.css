@@ -1,5 +1,5 @@
 button{
-    background-color: rgba(173,52,0,1);
+    background-color: rgba(173,52,0,1) !important;
     color: #FFF;
     padding: 0 45px;
     margin-top: 50px;
@@ -10,7 +10,7 @@ button{
     font-weight: bold;
     font-size: 1.2em;
     cursor: pointer;
-    transition: .4s;
+    transition: 500ms;
 }
 
 button:hover{
