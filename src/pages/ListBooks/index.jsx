@@ -40,8 +40,8 @@ const ListBooks = () => {
 
     return (
       <Container>
-        <section className={style.list_book_container}>
-          <h1>LIST BOOKS</h1>
+        <section className={style.createBookContainer}>
+          <h1>Livros disponíveis</h1>
 
           <ContainerBook>
             {
