@@ -4,6 +4,7 @@ import Container from './layout/Container';
 import Home from './pages/Home';
 import CreateBooks from './pages/CreateBooks';
 import ListBooks from './pages/ListBooks';
+import DetailBook from './pages/DetailBook';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ function App() {
               <Route path='/' element={<Home />}/>
               <Route path='/listBook' element={<ListBooks />}/>
               <Route path='/createBook' element={<CreateBooks />}/>
+              <Route path='/detailBook/:cod_livro' element={<DetailBook />}/>
             </Route>
           </Routes>
         </Container>

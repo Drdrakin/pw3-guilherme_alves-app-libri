@@ -1,5 +1,5 @@
 button{
-    background-color: rgba(173,52,0,1) !important;
+    background: rgba(173,52,0,1) !important;
     color: #FFF;
     padding: 0 45px;
     margin-top: 50px;
@@ -10,9 +10,9 @@ button{
     font-weight: bold;
     font-size: 1.2em;
     cursor: pointer;
-    transition: 500ms;
+    transition: 300ms;
 }
 
 button:hover{
-    background-color: #16A026;
+    background: #16A026 !important ;
 }

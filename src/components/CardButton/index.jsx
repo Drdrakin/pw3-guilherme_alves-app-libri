@@ -1,10 +1,12 @@
-import React from 'react'
 import style from './Button.module.css'
+import { Link } from 'react-router-dom';
 
-const Button = ({label}) => {
+const Button = ({label, router, cod_livro}) => {
   return (
     <div className={style.buttonContainer}>
-        <button>{label}</button>
+        <Link to={`${router}${cod_livro}`}>
+          <button>{label}</button>
+        </Link>
     </div>
   )
 }

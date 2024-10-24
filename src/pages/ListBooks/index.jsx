@@ -35,22 +35,21 @@ const ListBooks = () => {
                 console.log('STATE: ' + books);
             })
             .catch((err)=>{console.log(err)});
-
     }, []);
 
     return (
       <Container>
         <section className={style.createBookContainer}>
           <h1>Livros disponíveis</h1>
-
           <ContainerBook>
             {
               books.map((book)=>(
                   <BookCard
-                      titulo={book.nome_livro}
-                      autor={book.autor_livro}
-                      imagem={cavernas}
+                      title={book.nome_livro}
+                      author={book.autor_livro}
+                      image={cavernas}
                       key={book.cod_livro}
+                      cod_livro={book.cod_livro}
                   />
               ))
             }

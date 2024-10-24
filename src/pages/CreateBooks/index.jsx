@@ -3,11 +3,13 @@ import Input from '../../components/Forms/Input';
 import Select from '../../components/Forms/Select';
 import Button from '../../components/Forms/Button';
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const CreateBooks = () => {
 
   const [book, setBook] = useState({})
   const [categorias, setCategorias] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('http://localhost:5000/listagemCateorias', {
@@ -28,29 +30,35 @@ const CreateBooks = () => {
     )
   }, []);
 
-  function createBook(book) {     
-    fetch('http://localhost:5000/inserirLivro', {
-            method:'POST',
-            mode:'cors',
-            headers:{
-            'Content-Type':'application/json',
-            'Access-Control-Allow-Origin':'*',
-            'Access-Control-Allow-Headers':'*'
-            },
-            body: JSON.stringify(book)
-    })
-    .then(
-            (resp)=>resp.json()
-    )
-    .then(
-            (data)=>{
-            console.log(data);
-            // navigate('/livros',{state:'LIVRO CADASTRADO COM SUCESSO!'});
-            }
-    )
-    .catch(
-            (err)=>{ console.log(err) }
-    )
+  function createBook(book) {    
+    try {
+      fetch('http://localhost:5000/inserirLivro', {
+        method:'POST',
+        mode:'cors',
+        headers:{
+        'Content-Type':'application/json',
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Headers':'*'
+        },
+        body: JSON.stringify(book)
+      })
+      .then(
+        (resp)=>resp.json()
+      )
+      .then(
+        (data)=>{
+        console.log(data);
+          if(data.errorStatus == false){
+            navigate('/listBook', {state: 'Livro Inserido com sucesso!'})
+          }
+        }
+      )
+
+      
+    } catch (error) {
+      console.log(error)
+    } 
+
   }
 
   function submit(event) {
