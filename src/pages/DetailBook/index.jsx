@@ -10,31 +10,32 @@ const DetailBook = () => {
     const[book, setBook] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/listagemLivro/${cod_livro}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': '*'
-          }
-        })
-        .then(
-          (res) => res.json()
-        )
-        .then(
-          (res) => {
-            setBook(res.data)
-          }
-        )
-      }, []);
+      fetch(`http://localhost:5000/listagemLivro/${cod_livro}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': '*'
+        }
+      })
+      .then(
+        (res) => res.json()
+      )
+      .then(
+        (res) => {
+          setBook(res.data)
+        }
+      )
+    }, []);
     
     return (
         <div className={styles.container}>
+
             <h1>Detalhes de livro</h1>
             <div className={styles.grid}>
             
             <div className={styles.container_img}>
-                <img className={styles.img_book_detail} src={caverna} alt='Capa do livro: As cavernas de aço' />
+              <img className={styles.img_book_detail} src={caverna} alt='Capa do livro: As cavernas de aço' />
             </div>
 
             <div className={styles.info}>
@@ -43,22 +44,24 @@ const DetailBook = () => {
                 <span className={styles.autor}>{book.autor_livro}</span>
 
                 <span className={styles.descricao}>
-                    {book.descricao_livro}
+                  {book.descricao_livro}
                 </span>
 
                 <div className={styles.container_buttons}>
-                    <Button 
-                        label='EDITAR'
-                    />
+                  <Button 
+                    label='EDITAR'
+                    router='/editBook/'
+                    cod_livro={book.cod_livro}
+                  />
 
-                    <Button 
-                        label='EXCLUIR'
-                    />
-
+                  <Button 
+                    label='EXCLUIR'
+                    router='/deleteBook/'
+                    cod_livro={book.cod_livro}
+                  />
                 </div>
-
-            </div>
-        </div>
+              </div>
+          </div>
         </div>
     )
 }

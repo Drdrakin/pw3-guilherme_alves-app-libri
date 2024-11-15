@@ -1,6 +1,6 @@
 import styles from './Select.module.css';
 
-const Select = ({name, text, categorias, handler}) => {
+const Select = ({name, text, categorias, handler, value}) => {
 
     //Ordena alfabeticamente
     categorias.sort((a, b) => (a.nome_categoria > b.nome_categoria ? 1 : -1));
@@ -12,6 +12,7 @@ const Select = ({name, text, categorias, handler}) => {
                 name={name} 
                 id={name}
                 onChange={handler}
+                value={value}
             >
                 <option>Selecione uma categoria</option>
 

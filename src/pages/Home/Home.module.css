@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: top;
     height: 100vh;
+    margin-bottom: 0;
+    overflow: hidden;
 }
 
 .bookIcon{

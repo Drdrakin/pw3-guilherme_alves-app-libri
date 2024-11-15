@@ -1,6 +1,6 @@
 import styles from "./Input.module.css"
 
-const Input = ({type, text, placeholder, name, handler}) => {
+const Input = ({type, text, placeholder, name, handler, value}) => {
 
     //O componente se transforma em textarea para descrições se especificado.
     if(type == 'textarea'){
@@ -15,6 +15,7 @@ const Input = ({type, text, placeholder, name, handler}) => {
                     id={name}
                     placeholder={placeholder}
                     onChange={handler}
+                    value={value}
                 />
             </div>
         )
@@ -30,6 +31,7 @@ const Input = ({type, text, placeholder, name, handler}) => {
                     id={name}
                     placeholder={placeholder}
                     onChange={handler}
+                    value={value}
                 />
             </div>
         )
