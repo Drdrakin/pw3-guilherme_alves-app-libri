@@ -114,32 +114,32 @@ const EditBook = () => {
     }
 
     return (
-<section className={styles.createBookContainer}>
+    <section className={styles.createBookContainer}>
         <h1>Editar Livro</h1>
         <form onSubmit={submit} className={styles.createBookContainer}>
-          <Input 
-            type= 'text'
-            name= 'nome_livro'
-            placeholder= 'Digite o novo nome de seu livro aqui'
-            text= 'Título de Livro'
-            handler={handlerChangeBook}
-            value={book.nome_livro}
-          />
-          <Input 
-            type= 'text'
-            name= 'autor_livro'
-            placeholder= 'Digite o novo nome do autor aqui'
-            text= 'Nome do autor'
-            handler={handlerChangeBook}
-            value={book.autor_livro}
-          />
-          <Input 
-            type= 'textarea'
-            name= 'descricao_livro'
-            placeholder= 'Digite a nova descrição de seu livro aqui'
-            text= 'Descrição do Livro'
-            handler={handlerChangeBook}
-            value={book.descricao_livro}
+            <Input 
+                type= 'text'
+                name= 'nome_livro'
+                placeholder= 'Digite o novo nome de seu livro aqui'
+                text= 'Título de Livro'
+                handler={handlerChangeBook}
+                value={book.nome_livro}
+            />
+            <Input 
+                type= 'text'
+                name= 'autor_livro'
+                placeholder= 'Digite o novo nome do autor aqui'
+                text= 'Nome do autor'
+                handler={handlerChangeBook}
+                value={book.autor_livro}
+            />
+            <Input 
+                type= 'textarea'
+                name= 'descricao_livro'
+                placeholder= 'Digite a nova descrição de seu livro aqui'
+                text= 'Descrição do Livro'
+                handler={handlerChangeBook}
+                value={book.descricao_livro}
             />
             <Select className={styles.leftAlign}
                 name= 'cod_categoria'
@@ -147,9 +147,11 @@ const EditBook = () => {
                 categorias= {categories}
                 handler={handlerChangeBook}
             />
-            <Button
-                rotulo='Salvar Alterações'
-            />
+            <div className={styles.buttoni}>
+                <Button
+                    rotulo='Salvar Alterações'
+                />
+            </div>
         </form>
     </section>
     )
